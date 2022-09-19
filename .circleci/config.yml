@@ -3,14 +3,14 @@ version: 2
 jobs:
   test:
     docker:
-      - image: circleci/base:latest
+      - image: cimg/base:2022.09
     steps:
       - checkout
       - run: echo "Hello World"
 
   other test:
     docker:
-      - image: circleci/base:latest
+      - image: cimg/base:2022.09
     steps:
       - checkout
       - run: echo "Hello World 2"
