@@ -1,0 +1,23 @@
+version: 2
+
+jobs:
+  test:
+    docker:
+      - image: circleci/base:latest
+    steps:
+      - checkout
+      - run: echo "Hello World"
+
+  other test:
+    docker:
+      - image: circleci/base:latest
+    steps:
+      - checkout
+      - run: echo "Hello World 2"
+
+workflows:
+  version: 2
+  ci:
+    jobs:
+      - test
+      - other test
